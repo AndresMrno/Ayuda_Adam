@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container col-lg-6" id="formularioR">
+        <div class="card-header mb-4 fs-2 text-center" >
+            <h2>Formulario Reserva</h2>
+        </div>
+                                    
+        <div class="card-body">
+        <form id="document">
+            <div class="mb-4">
+                <label for="" class="form-label">Numero personas</label>
+                <input type="number" class="form-control" name="numero_personas" [(ngModel)]="reserva.numero_personas" autocomplete="on" required="">
+            </div>
+        
+            <div class="mb-4">
+                <label for="" class="form-label">fecha</label>
+                <input type="date" class="form-control" name="fecha" [(ngModel)]="reserva.fecha"autocomplete="on" required="">
+            </div>
+        
+            <div class="mb-4">
+                <label for="" class="form-label">Hora</label>
+                <input type="time" class="form-control" name="time" [(ngModel)]="reserva.hora" autocomplete="on" required="">
+            </div>
+
+            <div class="form-group row">
+                <label for="cancha" class="col-form-label col-sm-2">cancha</label>
+        
+                <select [(ngModel)]="reserva.id_cancha" class="form-control" name="id_cancha">
+                    <option [ngValue]="undefined">Selecione una cancha</option>
+                    <option *ngFor="let cancha of canchas" [ngValue]="cancha" autocomplete="on" > {{cancha.nombre_cancha}}  </option>
+        
+                </select>
+        
+            </div>
+            <div class="form-group row">
+                <label for="id_usuario" class="col-form-label col-sm-2">Usuario</label>
+        
+                <select [(ngModel)]="reserva.id_usuario" class="form-control" name="id_cancha">
+                    <option [ngValue]="undefined">Selecione un usuario</option>
+                    <option *ngFor="let usuario of usuarios" [ngValue]="usuario" autocomplete="on" > {{usuario.correo}}  </option>
+        
+                </select>
+        
+            </div>
+        
+            <button type="submit" class="btn btn-primary" (click)="crearReserva()" *ngIf="!reserva.id_reserva" >Guardar</button>
+            <button type="submit" class="btn btn-primary" (click)="actualizarReserva()" *ngIf="reserva.id_reserva" >Guardar</button>
+        </form>
+        </div>
+        </div>
+    
+</body>
+</html>
+
+          
+
+         

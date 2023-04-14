@@ -1,0 +1,56 @@
+<section>
+
+    <div class="container">
+        <div class="container-tittle">
+            <h2 class="fs-2 fw-bold">Formulario Reserva</h2>
+        </div>
+
+        <div class="container-body">
+            <form class="container-form" >
+                <div class="mb-4">
+
+                    <input class="container-input" type="number" class="form-control" name="numero_personas"
+                        [(ngModel)]="reserva.numero_personas" autocomplete="on" required=""
+                        placeholder="Numero Personas">
+                </div>
+
+                <div class="mb-4">
+                    <input class="container-input" type="date" class="form-control" name="fecha"
+                        [(ngModel)]="reserva.fecha" autocomplete="on" required="" placeholder="Seleccione Fecha">
+                </div>
+
+                <div class="mb-4">
+                    <input class="container-input" type="time" class="form-control" name="time"
+                        [(ngModel)]="reserva.hora" autocomplete="on" required="" placeholder="Hora">
+                </div>
+
+                <div class="mb-4">
+                    <select class="container-select"  [(ngModel)]="reserva.id_cancha" class="form-control"
+                        name="id_cancha">
+                        <option [ngValue]="undefined">Selecione una cancha</option>
+                        <option *ngFor="let cancha of canchas" [ngValue]="cancha" autocomplete="on">
+                            {{cancha.nombre_cancha}} </option>
+
+                    </select>
+
+                </div>
+                <div class="mb-4">
+                    <select class="container-select" style="margin-top: 5%;" [(ngModel)]="reserva.id_usuario" class="form-control"
+                        name="id_cancha">
+                        <option [ngValue]="undefined">Selecione un usuario</option>
+                        <option *ngFor="let usuario of usuarios" [ngValue]="usuario" autocomplete="on">
+                            {{usuario.correo}} </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit" class="container-buttons btn btn-success" (click)="crearReserva()"
+                    *ngIf="!reserva.id_reserva">Guardar</button>
+                <button type="submit" class="container-buttons btn btn-success" (click)="actualizarReserva()"
+                    *ngIf="reserva.id_reserva">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+</section>

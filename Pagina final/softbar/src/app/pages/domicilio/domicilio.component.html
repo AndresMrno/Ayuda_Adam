@@ -1,0 +1,58 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false" ></script>
+<section class="bg-light">
+
+    <h1 class="text-center">MIRA TU PEDIDO</h1>
+
+    <div class="container mb-4 " id="info">
+        <div class="row">
+          <div class="col-4 justify-items-center bg-primary" id="estado">
+            Estado: En curso
+          </div>
+          <div class="col-4 justify-items-center bg-primary" id="precio">
+            Precio $27.000
+          </div>
+        </div> 
+    </div>
+
+    <div id="main-container">
+
+        <table>
+          <thead class="bg-primary">
+            <th>Detalle del cliente</th><th>-------------</th>
+          </thead>
+
+          <tr>
+            <td>Nombre: Andres</td><td>Apellido: Moreno</td>
+          </tr>
+
+          <tr>
+            <td>Direccion: Calle</td><td>Telefono: 3134545746</td>
+          </tr>
+
+          <thead class="bg-primary"  *ngFor="let producto of myCart$ | async">
+            <th>Detalle producto</th><th>Precio</th>
+          </thead>
+
+            <tr>
+              <td>Cerveza Aguila Cero</td><td id="fila">$5.000</td>
+            </tr>
+
+            <tr>
+              <td>Cantidad</td><td id="fila"> 5 Unidades</td>
+            </tr>
+
+            <tr>
+              <td>Costo domicilio</td><td id="fila"> $2.000</td>
+            </tr>
+
+            <tr style="border-top: solid 3px;">
+              <td>Valor Total</td><td id="fila"> $27.000</td>
+            </tr>
+        </table>
+      </div>
+
+      <div class="box__footer">
+       
+      </div>
+   
+</section>

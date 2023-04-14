@@ -1,0 +1,53 @@
+<section>
+
+
+    <div class="container">
+        <div class="container-tittle">
+            <h2>Formulario Inventario</h2>
+        </div>
+
+        <div class="container-body" >
+            <form  class="container-form" id="document">
+                <div class="mb-4">
+                    <label for="" class="form-label">Fecha ingreso</label>
+                    <input class="container-input" type="date" class="form-control" name="fecha_ingreso" [(ngModel)]="inventario.fecha_ingreso"
+                        autocomplete="on" required="" >
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">Fecha vencimiento</label>
+                    <input class="container-input" type="date" class="form-control" name="fecha_vencimiento"
+                        [(ngModel)]="inventario.fecha_vencimiento" autocomplete="on" required="">
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">Cantidad Existente</label>
+                    <input class="container-input" type="number" class="form-control" name="cantidad_existente"
+                        [(ngModel)]="inventario.cantidad_existente" autocomplete="on" required="" placeholder="Cantidad Existente">
+                </div>
+
+                <div class="mb-4">
+                    <input class="container-input" id="fecha_nacimiento" type="text" class="form-control" name="nota" autocomplete="on"
+                        [(ngModel)]="inventario.nota" required="" placeholder="Nota">
+                </div>
+
+
+                <div class="form-group row">
+                    <select [(ngModel)]="inventario.id_producto_fk" class="form-control" name="id_producto" class="container-select">
+                        <option [ngValue]="undefined">Seleccione un producto</option>
+                        <option *ngFor="let producto of productos" [ngValue]="producto" autocomplete="on">
+                            {{producto.nombre_producto}} </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit" class="container-buttons btn btn-success" (click)="crearInventario()"
+                    *ngIf="!inventario.id_inventario">Guardar</button>
+                <button type="submit" class="container-buttons btn btn-success" (click)="actualizarInventario()"
+                    *ngIf="inventario.id_inventario">Actualizar</button>
+            </form>
+        </div>
+    </div>
+
+</section>

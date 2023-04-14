@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+figure{
+	margin: 20px;
+}
+
+.contenedor1{
+	width: 1200px;
+	height: 50vh;
+	padding: 30px;
+    margin-left: 5%;
+	
+}
+
+.contenedor1 figure{
+	position: relative;
+	height: 250px;
+	width: 350px;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+	cursor: pointer;
+	float: left;
+
+
+
+}
+
+.contenedor1 figure img{
+	width: 100%;
+	height: 100%;
+	transition: all 500ms ease-out;
+
+}
+
+.contenedor1 figure .capa{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 103, 123, 0.6);
+	transition: all 500ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	float: left;
+
+}
+.contenedor1 figure .capa1{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 103, 123, 0.6);
+	transition: all 500ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	float: left;
+
+	}
+	.contenedor1 figure .capa2{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 103, 123, 0.6);
+	transition: all 500ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	float: left;
+
+}
+.contenedor1 figure:hover > .capa{
+
+	opacity: 1;
+	visibility: visible;
+
+}
+.contenedor1 figure:hover > .capa h3{
+	margin-top: 70px;
+	margin-bottom: 15px;
+
+}
+.contenedor1 figure:hover > .capa1{
+
+	opacity: 1;
+	visibility: visible;
+
+}
+.contenedor1 figure:hover > .capa1 h3{
+	margin-top: 70px;
+	margin-bottom: 15px;
+
+}
+
+.contenedor1 figure:hover > .capa2{
+
+	opacity: 1;
+	visibility: visible;
+
+}
+.contenedor1 figure:hover > .capa2 h3{
+	margin-top: 70px;
+	margin-bottom: 15px;
+
+}
+
+.contenedor1 figure:hover > img{
+	transform: scale(1.3);
+}
+.contenedor1 figure .capa h3{
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 120px;
+	transition: all 500ms ease-out;
+	margin-top: 30px;
+
+}
+.contenedor1 figure .capa p{
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+	width: 100%;
+	max-width: 220px;
+	margin: auto;
+}
+.contenedor1 figure .capa1 h3{
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 120px;
+	transition: all 500ms ease-out;
+	margin-top: 30px;
+
+}
+.contenedor1 figure .capa1 p{
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+	width: 100%;
+	max-width: 220px;
+	margin: auto;
+}
+.contenedor1 figure .capa2 h3{
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 120px;
+	transition: all 500ms ease-out;
+	margin-top: 30px;
+
+}
+.contenedor1 figure .capa2 p{
+	color: black;
+	font-size: 15px;
+	line-height: 1.5;
+	width: 100%;
+	max-width: 220px;
+	margin: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
+/*MENU*/
+
+#Menu a {
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+
+.logo {
+    padding-top: 7%;
+    top: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.servicio-fila {
+    text-align: center;
+    justify-content: center;
+}
+
+
+.servicio-fila {
+    text-align: center;
+    justify-content: center;
+}
+.container-flex{
+    justify-content: center;
+    display: flex;
+}
+
+#carta{
+    background-color: aquamarine;
+
+    margin-top: 20%;
+    
+}
+
+ #carta1{
+    background-color:aquamarine;
+ 
+    margin-top: 20%;
+    
+}
+#carta2{
+    background-color: aquamarine;
+
+    margin-top: 20%;
+    
+}
+
+#carta #imagen{
+    height: 100px;
+    background-color: red;
+}
+
+.equipo-miembro {
+    text-align: center;
+    justify-content: center;
+}
+
+#contacto{
+	padding: 4%;
+    background-color: #282c31;
+    background-image: url("../../../assets/bar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#equipo{
+	margin-top: 4%;
+}
+
+
+#equipoSoftbar 
+{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#miembro
+{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+section#contacto .section-heading {
+    color: #fff;
+  }
+
+  section#contacto .section-heading.section-subheading {
+    color: #fff;
+  }
+
+  section#contacto form#contactForm .form-group {
+    margin-bottom: 1.5rem;
+  }
+  section#contacto form#contactForm .form-group input,
+  section#contacto form#contactForm .form-group textarea {
+    padding: 1.25rem;
+  }
+  section#contacto form#contactForm .form-group input.form-control {
+    height: auto;
+  }
+  section#contacto form#contactForm .form-group-textarea {
+    height: 100%;
+  }
+  section#contacto form#contactForm .form-group-textarea textarea {
+    height: 100%;
+    min-height: 10rem;
+  }
+  section#contacto form#contactForm p.help-block {
+    margin: 0;
+  }
+  section#contacto form#contactForm .form-control:focus {
+    border-color: #ffc800;
+    box-shadow: none;
+  }
+  section#contacto form#contactForm ::-webkit-input-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm :-moz-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm ::-moz-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm :-ms-input-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">Ventas</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link"[routerLink]="'/crudVenta'">Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">Inventario</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" [routerLink]="'/crudInventario'">Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">Domicilio</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" [routerLink]="'/crudDomicilio'">Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">Usuario</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" [routerLink]="'/crud'">Detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <h2>Crud Usuarios</h2>
+        <button class="btn btn-primary mb-3" [routerLink]="['/formularioR']">Crear Usuario</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id reserva</th>
+            <th scope="col">numero de personas</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Cancha</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Acciones</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let reserva of reservas">
+            <th scope="row"> {{reserva.id_reserva}} </th>
+            <td> {{reserva.numero_personas}} </td>
+            <td> {{reserva.fecha}} </td>
+            <td> {{reserva.hora}}</td>
+            <td> {{reserva.id_cancha.nombre_cancha}}</td>
+            <td> {{reserva.id_usuario.correo}}</td>
+            <td>
+                <button class="btn btn-info me-2"[routerLink]="['/formularioR', reserva.id_reserva]" >Editar</button>
+            </td>
+                <td>
+                    <button class="btn btn-danger" (click)="eliminarReserva(reserva.id_reserva)" >Eliminar</button>
+                </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+</body>
+</html>

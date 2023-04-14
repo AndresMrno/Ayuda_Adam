@@ -1,0 +1,65 @@
+<section>
+    <div class="container">
+        <div class="container-tittle" >
+            <h2 class="fs-2 fw-bold" style="margin-top: 2%;">Formulario usuarios</h2>
+        </div>
+        
+        <div class="container-body">
+        <form class="container-form" id="document">
+            <div class="mb-4">
+                <input class="container-input" id="identicacion" type="number" class="form-control" name="identificacion" [(ngModel)]="usuario.identificacion" autocomplete="on" required="" [disabled]="isEdit" placeholder="Numero identidad" >
+            </div>
+        
+            <div class="mb-4">
+               
+                <input  class="container-input" type="text" class="form-control" name="nombre" [(ngModel)]="usuario.nombre"autocomplete="on" required="" placeholder="Nombre" >
+            </div>
+        
+            <div class="mb-4">
+                <input class="container-input" type="text" class="form-control" name="apellido" [(ngModel)]="usuario.apellido" autocomplete="on" required="" placeholder="Apellido" >
+            </div>
+        
+            <div class="mb-4">
+                <label for="" class="form-label">Fecha</label>
+                  <input id="fecha_nacimiento" type="date" class="form-control" name="fecha_nacimiento" autocomplete="on" [(ngModel)]="usuario.fecha_nacimiento" [disabled]="isEdit" placeholder="Fecha_nacimiento"> 
+                
+
+            </div>
+
+            <div class="mb-4">
+                <input class="container-input"  id="edad" type="number" class="form-control" name="edad" autocomplete="on" [(ngModel)]="usuario.edad" required="" [disabled]="isEdit" placeholder="edad"> 
+            </div>
+
+            <div class="mb-4">
+                <input class="container-input" id="correo" type="email" class="form-control" name="correo" autocomplete="on" [(ngModel)]="usuario.correo" required="@" placeholder="Correo electronico" > 
+            </div>
+
+            <div class="mb-4">
+                <input class="container-input" id="contrasena" type="password" class="form-control" name="contrasena" autocomplete="on" [(ngModel)]="usuario.contrasena" required="" placeholder="Contraseña"> 
+            </div>
+
+            <div class="mb-4">
+                <input class="container-input" type="number" class="form-control" name="telefono"  autocomplete="on"[(ngModel)]="usuario.telefono" placeholder="Telefono">
+            </div>
+
+            <div class="mb-4">
+                <input class="container-input" type="text" class="form-control" name="direccion"  autocomplete="on"[(ngModel)]="usuario.direccion" placeholder="Direccion">
+            </div>
+
+            <div class="form-group row">
+        
+                <select [(ngModel)]="usuario.id_rol" class="form-control" name="id_rol" class="container-select" >
+                    <option [ngValue]="undefined" disabled  >Selecione un rol</option>
+                    <option *ngFor="let rol of roles" [ngValue]="rol" [selected]="usuario.id_rol" > {{rol.nombre_rol}}  </option>
+                </select>
+        
+            </div>
+        
+        <div >
+            <button class="container-buttons btn btn-success" type="submit"  (click)="crearUsuario()" *ngIf="!isEdit" >Guardar</button>
+            <button class="container-buttons btn btn-success" type="submit"  (click)="actualizarUsuario()" *ngIf="isEdit" >Actualizar</button>
+        </div>
+        </form>
+        </div>
+        </div>
+</section>

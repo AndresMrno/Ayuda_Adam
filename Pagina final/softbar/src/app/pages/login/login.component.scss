@@ -1,0 +1,16 @@
+.full-width{
+    width: 100%;
+}
+
+section{
+    background-image: url('../../../assets/fondo_pantalla.jpg');
+}
+
+.container{
+    padding: 2%;
+
+    &-form{
+        border-radius: 1rem;
+        background-color: lightgray;
+    }
+}

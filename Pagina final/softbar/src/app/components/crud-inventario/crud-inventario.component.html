@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Ventas</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" [routerLink]="'/crudVenta'" >Detalles</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Usuario</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" [routerLink]="'/crud'">Detalles</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Domicilio</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" [routerLink]="'/crudDomicilio'">Detalles</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Reserva</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" [routerLink]="'/crudReserva'" >Detalles</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container">
+            <h2>Crud Usuarios</h2>
+            <button class="btn btn-primary mb-3"[routerLink]="['/formularioI']">Crear Inventario</button>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id_inventario</th>
+                <th scope="col">Fecha Ingreso</th>
+                <th scope="col">Fecha vencimiento</th>
+                <th scope="col">Cantidad Existente</th>
+                <th scope="col">Nota</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let inventario of inventarios">
+                <th scope="row"> {{inventario.id_inventario}} </th>
+                <td> {{inventario.fecha_ingreso}} </td>
+                <td> {{inventario.fecha_vencimiento}} </td>
+                <td> {{inventario.cantidad_existente}}</td>
+                <td> {{inventario.nota}}</td>
+                <td> {{inventario.id_producto_fk.nombre_producto}}</td>
+                <td>
+                    <button class="btn btn-info me-2"[routerLink]="['/formularioI', inventario.id_inventario]" >Editar</button>
+                    <button class="btn btn-danger" (click)="eliminarInventario(inventario.id_inventario)" >Eliminar</button>
+        
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+    
+</body>
+</html>

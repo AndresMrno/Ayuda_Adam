@@ -1,0 +1,46 @@
+<section>
+    <div class="container">
+        <div class="container-tittle">
+            <h2 class="fs-2 fw-bold">Formulario Pedido</h2>
+        </div>
+
+        <div class="container-body">
+            <form class="container-form" id="document">
+                <div class="mb-4">
+                    <input type="number" class="container-input" class="form-control" name="number" [(ngModel)]="pedido.precio"
+                        autocomplete="on" required="" placeholder="Precio">
+                </div>
+
+                <div class="mb-4">
+                    <input  class="container-input" type="number" class="form-control" name="cantidad" [(ngModel)]="pedido.cantidad"
+                        autocomplete="on" required="" placeholder="Cantidad">
+                </div>
+                
+                <div class="form-group row">
+                    <select [(ngModel)]="pedido.id_usuario_fk" name="id_usuario_fk" class="container-select">
+                        <option [ngValue]="undefined">Selecione un usuario</option>
+                        <option *ngFor="let usuario of usuarios" [ngValue]="usuario" autocomplete="on">
+                            {{usuario.identificacion}} </option>
+                    </select>
+
+                </div>
+
+                <div class="form-group row">
+                    <select [(ngModel)]="pedido.id_productos_fk" style="margin-top:4%;"  name="productos" class="container-select">
+                        <option [ngValue]="undefined">Selecione un producto</option>
+                        <option *ngFor="let producto of productos" [ngValue]="producto" autocomplete="on">
+                            {{producto.nombre_producto}} </option>
+                    </select>
+
+
+                </div>
+
+                <button type="submit" class="container-buttons btn btn-success" (click)="crearPedido()"
+                    *ngIf="!pedido.id_pedido">Guardar</button>
+                <button type="submit" class="container-buttons btn btn-success" (click)="actualizarPedido()"
+                    *ngIf="pedido.id_pedido">Actualizar</button>
+            </form>
+        </div>
+    </div>
+
+</section>

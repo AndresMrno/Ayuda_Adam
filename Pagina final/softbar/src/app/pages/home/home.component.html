@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3 text-center ">
+                <img src="../../../assets/LOGO.png" class="text-center" width="400" height="400">
+
+                <h1 class="text-center fs-2 fw-bold margin-top:20px;"><a href="servicios"></a>SERVICIOS</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="contenedor1 text-center mb-2" id="servicios">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2 class="fw-bold fs-4">Domicilio</h2>
+                <figure class="mr20">
+                    <img src="../../../assets/Domicilio.JPG" alt="">
+                    <div class="capa" id="capa">
+                        <h3>Leer mas</h3>
+                        <a [routerLink]="'/domicilio'">
+                            <p>Si desea que el producto llegue a la puerta de su casa a la hora que desea</p>
+                        </a>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4">
+
+                <h2 class="fw-bold fs-4">Ventas</h2>
+            <figure>
+                <img src="../../../assets/venta.png" alt="">
+                <div class="capa2" id="capa2">
+                    <h3>Leer Mas</h3>
+                    <a [routerLink]="'/venta'" class="text-light">
+                        <p> Puede comprar productos de categoria licor en tipo catalogo</p>
+                    </a>
+
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-4">
+
+            <h2 class="fw-bold fs-4">Reserva</h2>
+        <figure>
+            <img src="../../../assets/reserva.JPG" alt="">
+            <div class="capa2" id="capa2">
+                <h1></h1>
+                <h3>Leer mas</h3>
+                <a [routerLink]="'/reserva'">
+                    <p> Si esta cansado de las largas filas, aparte su reserva de canchas de tejo aquí
+                    </p>
+                </a>
+
+            </div>
+        </figure>
+    </div>
+
+        </div>
+    
+    </section>
+
+             <!--ACERCA DE NOSOTROS -->
+            
+             <section class="page-section bg-light" id="equipo">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase fw-bold fs-2 " id="equipoSoftbar" >Equipo Softbar</h2>
+                        <h3 class="section-subheading text-muted fs-4">Somos un equipo proyectado ayudar con nuestro sistema de información a los bares con canchas de tejo, actualmente estamos en proceso de elaboración de ultimas mejoras. Nuestro equipo esta certificado en el sena con el programa ADSI "Analisis y desarrollo en sistemas de informacion" ,Este grupo esta conformado por 4 personas las cuales son.</h3>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row equipo-miembro">
+                        <div class="col-lg-6">
+                            <div class="equipo-miembro" >
+                                <img class="mx-auto rounded-circle" src="../../../assets/Andres O.png" alt="..." />
+                                <h4>Andres Ortiz</h4>
+                                <p class="text-muted">Inventario</p>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="equipo-miembro">
+                                <img class="mx-auto rounded-circle" src="../../../assets/Andres M.png" alt="..." />
+                                <h4>Andres Moreno</h4>
+                                <p class="text-muted">domicilios</p>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="equipo-miembro" id="miembro">
+                                <img class="mx-auto rounded-circle" src="../../../assets/Alejandra.png" alt="..." />
+                                <h4>Alejandra Moncada </h4>
+                                <p class="text-muted">Ventas</p>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="equipo-miembro" id="miembro">
+                                <img class="mx-auto rounded-circle" src="../../../assets/adam.png" alt="..." />
+                                <h4>Adam Torres </h4>
+                                <p class="text-muted">Reserva</p>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+             </section>
+
+              <!-- Contacto-->
+        <section class="page-section" id="contacto">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">contactenos</h2>
+                    <h3 class="section-subheading text-light">Leeremos sus mensajes.</h3>
+                </div>
+                
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Su nombre *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Su nombre es requerido.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Su correo electronico *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Su correo es requerido.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Correo no es valido.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control text-dark" id="phone" type="tel" placeholder="Su número de telefono *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Su numero de telefono es requerido.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Escriba su mensaje *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Su mensaje es requerido.</div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                   
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Enviar mensaje</button></div>
+                </form>
+            </div>
+        </section>
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
